@@ -1,0 +1,33 @@
+.visningar{
+    color: #DFDEDE;
+    width: 100%;
+    padding-top: 30px;
+  }
+  
+  .visningar th{
+    padding: 10px;
+    padding-left: 50px;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+  
+  .visningar td{
+    text-align: left;
+    padding-left: 50px;
+    padding-bottom: 40px;
+  }
+  
+  .visningar button{
+    padding: 15px 20px;
+    width: 120px;
+    font-size: 14px;
+    background-color: #760000;
+    color: #DFDEDE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .visningar button:hover {
+    background-color: #370a07; 
+  }

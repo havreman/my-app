@@ -1,0 +1,95 @@
+.article-link{
+    text-decoration: none;
+    display: block;
+    position: relative;
+  }
+  
+.articles {
+    padding-top: 20px;
+    column-gap: 30px;
+    row-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+article {
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    height: 300px;
+  }
+  
+.barnvagn{
+    background-image: url('/public/images/barnvagnfront.jpg');
+  }
+  
+.bio-vino{
+    background-image: url('/public/images/biovino.png');
+  }
+  
+.skolbio{
+    background-image: url('/public/images/skolbio.png');
+  }
+  
+.nyhetsbrev{
+    background-image: url('/public/images/salong.jpg');
+  }
+  
+.articles h2{
+    color: #DFDEDE;
+    position: absolute;
+    bottom: 5px;  /* Justera avståndet från botten */
+    right: 10px;   /* Justera avståndet från höger */
+  }
+  
+.article-info{
+    color: #DFDEDE;
+    padding: 30px
+  }
+  
+.article-info h1{
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  
+.article-info h3{
+    text-align: center;
+  }
+  
+.article-info button{
+    padding: 15px 20px;
+    font-size: 14px;
+    background-color: #620101;
+    color: #DFDEDE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+#email{
+  color: rgb(47, 47, 47);
+  padding: 8px;
+  width: 200px;
+  height: 25px;
+  border-radius: 10px;
+}
+  
+.article-info button:hover, .article-film button:hover {
+  background-color: #370a07; 
+}
+  
+.article-text{
+  color: #3d3b3b;
+}
+  
+.article-img{
+  height: 850px; 
+}
+
+.article-info button{
+  margin-left: 20px;
+}

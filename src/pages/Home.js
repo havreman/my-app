@@ -1,24 +1,27 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import Slideshow from "../components/Slideshow";
+import "../styles/Main.css";
+
 
 class Home extends React.Component{
     render(){
         return( 
-        <div class="main-content">
-            <div class="film-container">
+        <div className="main-content">
+            <div className="film-container">
             < Slideshow/>
             </div>
         <main>
-            <div class="articles">
-                <a href="barnvagnsbio.html" class="article-link">
-                    <article class="barnvagn"> <h2>Barnvagnsbio</h2> </article>
-                </a>
-                <a href="#" class="article-link">
-                    <article class="nyhetsbrev">
+            <div className="articles">
+                <Link to="/Barnvagnsbio" className="article-link">
+                    <article className="barnvagn"> <h2>Barnvagnsbio</h2> </article>
+                </Link>
+                <a href="#" className="article-link">
+                    <article className="nyhetsbrev">
                         <h2>Veckans nyhetsbrev</h2>
                     </article>
                 </a>
-                <a href= "#" class="article-link">
+                <a href= "#" className="article-link">
                     <article className="bio-vino">
                         <h2>Bio Vino</h2>
                     </article>
