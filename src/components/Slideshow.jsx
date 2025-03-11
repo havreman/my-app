@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from "react";
+import {Link} from "react-router-dom";
 
 function Slideshow () {
 
@@ -44,9 +45,9 @@ function Slideshow () {
   return (
     <div className="slideshow-container">
       <div className="mySlides">
-        <a href="film.html">
+        <Link to="/Film">
           <img src={slides[slideIndex].src} alt="Filmomslag" />
-          </a>
+          </Link>
       </div>
     
       <button className="prev" onClick={() => plusSlides(-1)}>
