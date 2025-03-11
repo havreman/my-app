@@ -57,4 +57,24 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    justify-content: center;  /* Centrerar texten horisontellt */
+    align-items: center;  /* Centrerar texten vertikalt */
+    text-align: center;
+    height:55px;
   }
+
+.buttons {
+  display: flex;
+  align-items: center; 
+  gap: 15px; 
+}
+
+.like-button{
+  height: 55px;
+  width: auto;  
+  padding: 0 20px;  
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  text-align: center; 
+}
