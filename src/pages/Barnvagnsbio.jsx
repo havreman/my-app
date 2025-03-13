@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Artiklar.css";
+import ArticleImage from "../components/ArticleImage";
 
 
 class Barnvagnsbio extends React.Component{
@@ -7,7 +8,10 @@ class Barnvagnsbio extends React.Component{
         return(
             <div className="main-content">
             <main>
-            <img src="/images/barnvagn.png"/>
+            <ArticleImage
+            src="/images/barnvagn.png"
+            alt = "En bild från filmen Insidan ut 2"
+            className= "main-image"/>
                 <div className="article-info">
                     <h1>Välkommen på barnvagnsbio</h1>
                     <h3>Bli en del av bio-gemenskapen</h3>

@@ -4,13 +4,17 @@ import "../styles/Artiklar.css";
 import "../styles/Main.css";
 import {Link} from "react-router-dom";
 import LikeButton from "../components/LikeButton";
+import ArticleImage from "../components/ArticleImage";
 
 const Film = () => {
     
     return( 
     <div className="main-content">
         <main className="article-film">
-            <img src="../images/Insidan.ut_.2.jpg"/>
+        <ArticleImage
+            src="/../images/Insidan.ut_.2.jpg"
+            alt = "En bild från filmen Insidan ut 2"
+            className= "main-image"/>
             <div className="info-film">
                 <div className="fact">
                     <h4>Faktaruta om filmen</h4>
