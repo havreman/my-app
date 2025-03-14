@@ -2,9 +2,12 @@ import React, {useState} from "react";
 import "../styles/Film.css";
 import "../styles/Artiklar.css";
 import "../styles/Main.css";
-import {Link} from "react-router-dom";
 import LikeButton from "../components/LikeButton";
 import ArticleImage from "../components/ArticleImage";
+import FilmFacts from "../components/FilmFact";
+import FilmDescription from "../components/FilmDescription";
+import Button from "../components/Button";
+import Trailers from "../components/Trailers";
 
 const Film = () => {
     
@@ -16,27 +19,26 @@ const Film = () => {
             alt = "En bild från filmen Insidan ut 2"
             className= "main-image"/>
             <div className="info-film">
-                <div className="fact">
-                    <h4>Faktaruta om filmen</h4>
-                    <p>Längd: 1h 36min</p>
-                    <p>Kategori: Barn/Komedi</p>
-                    <p>Språk: Svenska</p>
-                    <p>Från: 2024</p>
-                    <p>Ressigör: Kelsey Mann</p>
-                    <p>I rollerna: Amy Poehler, Kensington Tallman, Phyllis Smith mfl.</p>
-                </div>
+                    <FilmFacts          
+                        length="1h 36min"
+                        category="Barn/Komedi"
+                        language="Svenska"
+                        year="2024"
+                        director="Kelsey Mann"
+                        actors="Amy Poehler, Kensington Tallman, Phyllis Smith m.fl."/>
                 <div className="description">
-                    <p>Insidan Ut 2 (originaltitel: Inside Out 2) är en animerad film från Disney och Pixar, som är en uppföljare till den älskade succéfilmen Insidan Ut. I den nya filmen återvänder vi till Rileys inre värld, där känslorna Glädje, Vemod, Rädsla, Ilska och Avsky fortsätter att styra hennes liv och hantera tonårens utmaningar.</p>
-                    <p>Denna gång introduceras nya känslor som skapar ännu mer kaos och humor i huvudpersonens inre värld. Med fängslande animation, hjärtevärmande berättelse och en blandning av skratt och eftertänksamhet, utforskar filmen frågor om identitet, växande och relationer på ett unikt och fantasifullt sätt.</p>
+                    <FilmDescription
+                    paragraphs={["Insidan Ut 2 (originaltitel: Inside Out 2) är en animerad film från Disney och Pixar, som är en uppföljare till den älskade succéfilmen Insidan Ut. I den nya filmen återvänder vi till Rileys inre värld, där känslorna Glädje, Vemod, Rädsla, Ilska och Avsky fortsätter att styra hennes liv och hantera tonårens utmaningar. ",
+                        "Denna gång introduceras nya känslor som skapar ännu mer kaos och humor i huvudpersonens inre värld. Med fängslande animation, hjärtevärmande berättelse och en blandning av skratt och eftertänksamhet, utforskar filmen frågor om identitet, växande och relationer på ett unikt och fantasifullt sätt."
+                    ]}/>
                 <div className = "buttons">
-                        <Link to="/Biljetter"><button type="button">Biljetter</button> </Link>
+                        <Button text="Biljetter" link="/Biljetter"/>
                     <LikeButton/>
                 </div>
+                </div>
             </div>
-            </div>
-            <video controls>
-                <source src="/images/trailer.mov" className="video" />
-            </video>
+            <Trailers
+                src="/images/trailer.mov"/>
         </main>
     </div>);
     };

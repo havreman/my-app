@@ -1,27 +1,24 @@
 import { Link } from "react-router-dom";
 
-function Articles (){
+// En återanvändbar komponent för varje artikel
+const ArticleItem = ({ title, link, className }) => {
+    return (
+      <Link to={link} className="article-link">
+        <article className={className}>
+          <h2>{title}</h2>
+        </article>
+      </Link>
+    );
+  };
+
+  const Articles = () => {
     return (
         <div className="articles">
-                <Link to="/Barnvagnsbio" className="article-link">
-                    <article className="barnvagn"> <h2>Barnvagnsbio</h2> </article>
-                </Link>
-                <a href="#" className="article-link">
-                    <article className="nyhetsbrev">
-                        <h2>Veckans nyhetsbrev</h2>
-                    </article>
-                </a>
-                <a href= "#" className="article-link">
-                    <article className="bio-vino">
-                        <h2>Bio Vino</h2>
-                    </article>
-                </a>
-                <a href= "#" className="article-link">
-                    <article className="skolbio">
-                        <h2>Skolbio</h2>
-                    </article>
-                </a>
-            </div>
+            <ArticleItem title="Barnvagnsbio" link="/Barnvagnsbio" className="barnvagn" />
+            <ArticleItem title="Veckans nyhetsbrev" link="#" className="nyhetsbrev" />
+            <ArticleItem title="Bio Vino" link="#" className="bio-vino" />
+            <ArticleItem title="Skolbio" link="#" className="skolbio" />
+        </div>
       );
 }
 
